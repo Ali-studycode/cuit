@@ -40,8 +40,8 @@
     </form>
 
     <p class="text-sm text-center mt-4 text-gray-500">
-      Already have an account?
-      <a href="/login" class="text-blue-600 hover:underline">Login here</a>
+      Sudah Punya Akun?
+      <a href="/login" class="text-blue-600 hover:underline">Silahkan Login</a>
     </p>
   </div>
 

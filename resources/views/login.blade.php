@@ -31,8 +31,8 @@
     </form>
 
     <p class="text-sm text-center mt-4 text-gray-500">
-      Don't have an account?
-      <a href="/register" class="text-blue-600 hover:underline">Sign Up Here</a>
+      Belum Punya Akun?
+      <a href="/register" class="text-blue-600 hover:underline">Daftar di sini</a>
     </p>
   </div>
 
