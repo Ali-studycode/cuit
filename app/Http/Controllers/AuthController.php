@@ -29,17 +29,17 @@ class AuthController extends Controller
 
     }
 
-    public function login(Request $request):RedirectResponse 
+   public function login(Request $request):RedirectResponse 
     {
         if (Auth::attempt([
             'email' => $request->email,
             'password' => $request->password,            
         ])) {
-            User::where(['email' => $request->email])->first();
+            $user = User::where(['email' => $request->email])->first();
             Auth::login($user);
             return redirect('/');
         }
-        return redirect('login')->with('eror', 'Email / Passwordnya salah');
+        return redirect('login')->with('eror', 'Email / Password salah');
     }
 
     public function logout(Request $request): RedirectResponse
@@ -47,5 +47,7 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
+
+        return redirect('login');
     }
 }
